@@ -1,0 +1,57 @@
+/* COLOR VARIABLES */
+:root {
+  --main-green: #1f6a49;
+  --light-green: #3a9c54;
+  --grey: #a0a0a0;
+  --dark: #404141;
+  --bg-grey: #f0f0f0;
+  --bs-body-bg: #f0f0f0;
+}
+/* HEADER SECTION */
+header {
+  background: var(--bg-grey);
+  min-height: 60px;
+  border-bottom: 2px solid var(--main-green);
+}
+
+.navbar-brand img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+}
+/* HOME HERO SECTION */
+.home__nav--items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.home__nav--item {
+  flex: 1;
+  flex-wrap: nowrap;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  border: 1px solid var(--bg-grey);
+  border-radius: 0.2rem;
+  color: var(--main-green);
+  font-weight: 700;
+  background-color: var(--bg-grey);
+  padding: 0 0.5rem;
+  width: fit-content;
+}
+
+.home__hero > .row-1 {
+  background-color: var(--main-green);
+  border-radius: 0.8rem;
+  min-height: 50px;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+.home__hero > .row-2 {
+  min-height: 650px;
+  padding: 1rem 0;
+}
