@@ -7,6 +7,34 @@
   --bg-grey: #f0f0f0;
   --bs-body-bg: #f0f0f0;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand";
+}
+p {
+  font-family: sans-serif;
+}
+
 /* HEADER SECTION */
 header {
   background: var(--bg-grey);
@@ -19,6 +47,23 @@ header {
   height: 80px;
   object-fit: cover;
 }
+
+.header__sub {
+  background-color: var(--main-green);
+  color: var(--bg-grey);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.header__sub:hover {
+  background-color: var(--dark);
+}
+
+/* HEADER SECTION ENDS HERE */
+
 /* HOME HERO SECTION */
 .home__nav--items {
   display: flex;
@@ -48,10 +93,196 @@ header {
   background-color: var(--main-green);
   border-radius: 0.8rem;
   min-height: 50px;
-  padding: 1rem 0;
   margin: 1rem 0;
 }
+.home__hero--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
 .home__hero > .row-2 {
   min-height: 650px;
   padding: 1rem 0;
+}
+
+.home__hero--secondCol {
+  animation: slide-up 1.5s linear;
+}
+
+.home__hero--secondCol > h2 {
+  font-weight: 800;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* HOME SECTION HERO ENDS HERE */
+
+/* FEATURED TOPICS SECTION STARTS HERE */
+
+.home__topics {
+  min-height: 600px;
+  padding: 4rem 0;
+}
+
+.home__topics h2 {
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+}
+
+.home__topics--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home__topics--single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-green);
+  color: #fff;
+  min-height: 150px;
+  width: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+}
+
+@media screen and (width <= 700px) {
+  .home__topics--single {
+    width: 45%;
+  }
+}
+
+/* @media screen and (width <= 430px) {
+  .home__topics--single {
+    width: 45%;
+    margin: 0 auto;
+  }
+} */
+
+.home__topics--single:hover {
+  background-color: var(--dark);
+}
+.topic__more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.topic__title h3 {
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+.topic__link {
+  text-decoration: none;
+  color: var(--bg-grey);
+  font-weight: 700;
+}
+
+.home__topics--single:hover .topic__more {
+  display: block;
+  background-color: var(--main-green);
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+/* HOME RECENT POSTS STARTS HERE */
+
+.recent__container {
+  min-height: 600px;
+}
+.recent__container--title {
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+}
+
+.recent__posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent__singlePost {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-radius: 0.5rem;
+  animation: slide-up 0.8s linear;
+}
+
+@media screen and (width <= 768px) {
+  .recent__singlePost {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.recent__singlePost:hover {
+  box-shadow: 4px 2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.recent__singlePost img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.recent__singlePost--meta {
+  padding: 0 0.5rem;
+  align-self: flex-start;
+}
+
+.recent__singlePost--meta > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.recent__singlePost--meta h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.go-to_blog {
+  text-decoration: none;
+  border: 1px solid var(--main-green);
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--main-green);
+  font-weight: 800;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  transition: all 0.5s ease-in;
+}
+
+.go-to_blog:hover {
+  background-color: var(--dark);
+  color: var(--bg-grey);
+  border: none;
 }
