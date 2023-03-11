@@ -40,6 +40,7 @@ header {
   background: var(--bg-grey);
   min-height: 60px;
   border-bottom: 2px solid var(--main-green);
+  transition: all 1s ease-in;
 }
 
 .navbar-brand img {
@@ -225,6 +226,17 @@ header {
   animation: slide-up 0.8s linear;
 }
 
+.recent__singlePost a {
+  color: #000;
+  text-decoration: none;
+}
+
+.recent__singlePost a:hover {
+  color: var(--main-green);
+  text-decoration: underline;
+  font-weight: 800;
+}
+
 @media screen and (width <= 768px) {
   .recent__singlePost {
     width: 100%;
@@ -263,7 +275,7 @@ header {
 }
 
 .recent__singlePost--meta h2 {
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: clamp(1rem, 3vw, 1.2rem);
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -277,7 +289,7 @@ header {
   margin: 0 auto;
   color: var(--main-green);
   font-weight: 800;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(0.8rem, 3vw, 1rem);
   transition: all 0.5s ease-in;
 }
 
@@ -292,6 +304,17 @@ header {
 footer {
   min-height: 600px;
   background-color: var(--dark);
+}
+
+footer a {
+  color: var(--bg-grey);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--light-green);
+  text-decoration: underline;
+  text-decoration-color: var(--bg-grey);
+  text-decoration-thickness: 10%;
 }
 
 .footer__row1 {
@@ -321,6 +344,20 @@ footer {
   }
 }
 
+.footer__row1--col button {
+  background-color: var(--main-green);
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--bg-grey);
+  font-weight: 700;
+  border-radius: 0.3rem;
+}
+
+.footer__row1--col button:hover {
+  background-color: var(--dark);
+  border: 1px solid var(--light-green);
+}
+
 footer h3 {
   font-weight: 800;
   font-size: clamp(1.8rem, 3vw, 2.2rem);
@@ -329,4 +366,22 @@ footer h3 {
 
 footer p {
   color: var(--bg-grey);
+}
+
+@media screen and (width <= 768px) {
+  .footer__about {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer__socials .fa-brands {
+  color: var(--bg-grey);
+  font-size: clamp(2rem, 3vw, 3rem);
 }
