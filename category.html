@@ -46,6 +46,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -137,7 +138,7 @@
     </header>
 
     <!--==HERO SECTION==-->
-    <section class="container home__hero">
+    <section class="container blog__hero">
       <div class="row row-1">
         <div class="col home__nav--items">
           <a href="#" class="home__nav--item">HOME</a>
@@ -156,266 +157,20 @@
         </div>
       </div>
       <div class="row row-2">
-        <div class="col-lg-6 col-12 mb-3 home__hero--firstCol">
-          <img
-            src="Assets/Images/healthfeed hero.webp"
-            alt="Healthfeedplus Hero Image"
-            class="home__hero--img"
-            width="600"
-          />
-          <h1
-            style="
-              font-size: clamp(0.8rem, 3vw, 1rem);
-              text-transform: uppercase;
-              color: #fff;
-              background: var(--main-green);
-              width: fit-content;
-              padding: 0.3rem;
-              margin-top: -30px;
-              position: absolute;
-            "
-          >
-            HealthFeedPlus
-          </h1>
-        </div>
-        <div class="col-lg-6 col-12 mt-3 home__hero--secondCol">
-          <h2>Stay Informed & Healthy</h2>
-          <p>
-            Hi! Welcome to the most trusted online source for naturally minded
-            beings… We’re so glad you’re here. We believe that moms are the most
-            powerful force on the planet and we’re unwavering in supporting,
-            uplifting, and encouraging each other. Join the tribe here!
+        <div class="col mb-3 blog__hero--items">
+          <div class="blog__hero--breadcrum">
+            <a href="/" class="homePage"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+            --
+            <a href="/" class="homePage"> category</a>
+            --
+            <p>Category Title</p>
+          </div>
+          <h1>Posts on: Category Title</h1>
+          <p class="text-center">
+            Short and detailed description of the category will be here.
           </p>
-          <div>
-            <!-- Begin Mailchimp Signup Form -->
-            <link
-              href="//cdn-images.mailchimp.com/embedcode/classic-071822.css"
-              rel="stylesheet"
-              type="text/css"
-            />
-            <style type="text/css">
-              #mc_embed_signup {
-                background: inherit;
-                clear: left;
-                font-family: "Quicksand", sans-serif;
-                width: 100%;
-              }
-              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style>
-            <div id="mc_embed_signup">
-              <p>
-                Be the first to know when we publish new articles on your
-                favorite health topics. Sometimes we announce giveaways to our
-                subscribers. Don't miss out. Join the tribe!
-              </p>
-              <form
-                action="https://alphawebtips.us1.list-manage.com/subscribe/post?u=0bf3543e0f26ecd6889f91c7f&amp;id=4348c33554&amp;f_id=00767ee2f0"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                class="validate"
-                target="_blank"
-                novalidate
-                style="
-                  background-color: var(--main-green);
-                  color: #fff;
-                  font-weight: 700;
-                  width: 100%;
-                  margin-left: 0;
-                  padding: 1.5rem 1rem;
-                  border-radius: 0.5rem;
-                "
-              >
-                <div id="mc_embed_signup_scroll">
-                  <h2>Subscribe to our Newsletter</h2>
-                  <div class="indicates-required">
-                    <span class="asterisk">*</span> indicates required
-                  </div>
-                  <div class="mc-field-group">
-                    <label for="mce-FNAME"
-                      >First Name <span class="asterisk">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      value=""
-                      name="FNAME"
-                      class="required"
-                      id="mce-FNAME"
-                      required
-                    />
-                    <span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
-                  </div>
-                  <div class="mc-field-group">
-                    <label for="mce-EMAIL"
-                      >Email Address <span class="asterisk">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      value=""
-                      name="EMAIL"
-                      class="required email"
-                      id="mce-EMAIL"
-                      required
-                    />
-                    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-                  </div>
-                  <div id="mce-responses" class="clear foot">
-                    <div
-                      class="response"
-                      id="mce-error-response"
-                      style="display: none"
-                    ></div>
-                    <div
-                      class="response"
-                      id="mce-success-response"
-                      style="display: none"
-                    ></div>
-                  </div>
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div
-                    style="position: absolute; left: -5000px"
-                    aria-hidden="true"
-                  >
-                    <input
-                      type="text"
-                      name="b_0bf3543e0f26ecd6889f91c7f_4348c33554"
-                      tabindex="-1"
-                      value=""
-                    />
-                  </div>
-                  <div class="optionalParent">
-                    <div class="clear foot">
-                      <input
-                        type="submit"
-                        value="Subscribe"
-                        name="subscribe"
-                        id="mc-embedded-subscribe"
-                        class="button"
-                      />
-                      <p class="brandingLogo">
-                        <a
-                          href="http://eepurl.com/ikZGM9"
-                          title="Mailchimp - email marketing made easy and fun"
-                          ><img
-                            src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
-                        /></a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <script
-              type="text/javascript"
-              src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-            ></script>
-            <script type="text/javascript">
-              (function ($) {
-                window.fnames = new Array();
-                window.ftypes = new Array();
-                fnames[0] = "EMAIL";
-                ftypes[0] = "email";
-                fnames[1] = "FNAME";
-                ftypes[1] = "text";
-                fnames[2] = "LNAME";
-                ftypes[2] = "text";
-                fnames[3] = "ADDRESS";
-                ftypes[3] = "address";
-                fnames[4] = "PHONE";
-                ftypes[4] = "phone";
-                fnames[5] = "BIRTHDAY";
-                ftypes[5] = "birthday";
-                fnames[6] = "NAME";
-                ftypes[6] = "text";
-              })(jQuery);
-              var $mcj = jQuery.noConflict(true);
-            </script>
-            <!--End mc_embed_signup-->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--==FEATURED TOPICS==-->
-    <section class="container home__topics">
-      <div class="row">
-        <h2 class="text-center">Featured Health Topics</h2>
-        <p class="text-center">See the topics we cover below</p>
-      </div>
-      <div class="row">
-        <div class="col-12 home__topics--container">
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="/category.html" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
-
-          <div class="home__topics--single">
-            <div class="topic__title">
-              <h3>Topic Title Here</h3>
-            </div>
-            <div class="topic__more">
-              <a href="#" class="topic__link">SEE ALL</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -423,9 +178,6 @@
     <!--==RECENT POSTS==-->
     <section class="container recent__container">
       <div class="row">
-        <h2 class="col-12 text-center mb-5 recent__container--title">
-          Recent Health Posts
-        </h2>
         <div class="col-12 recent__posts">
           <div class="recent__singlePost">
             <img
@@ -438,9 +190,7 @@
             />
             <div class="recent__singlePost--meta">
               <p>Category</p>
-              <h2>
-                <a href="/singlepost.html">Natural Homemade Ulcer Remedy</a>
-              </h2>
+              <h2><a href="#">Natural Homemade Ulcer Remedy</a></h2>
               <p>January 10, 2023</p>
             </div>
           </div>
@@ -520,9 +270,90 @@
             </div>
           </div>
         </div>
-        <a href="/blog.html" class="text-center mt-5 go-to-blog"
-          >SEE ALL POSTS <i class="fa-solid fa-arrow-right"></i
-        ></a>
+        <div class="blog__pagination text-center">WP PAGINATION HERE</div>
+      </div>
+    </section>
+
+    <!--==FEATURED TOPICS==-->
+    <section class="container home__topics">
+      <div class="row">
+        <h2 class="text-center">All Categories</h2>
+        <p class="text-center">See the topics we cover below</p>
+      </div>
+      <div class="row">
+        <div class="col-12 home__topics--container">
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+
+          <div class="home__topics--single">
+            <div class="topic__title">
+              <h3>Topic Title Here</h3>
+            </div>
+            <div class="topic__more">
+              <a href="#" class="topic__link">SEE ALL</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
