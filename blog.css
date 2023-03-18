@@ -73,6 +73,17 @@ header {
   padding: 1rem 0;
 }
 
+@media screen and (width >= 768px) {
+  .single__post .row-2 > div:nth-child(2) {
+    border: 2px solid var(--main-green);
+    border-bottom: 0;
+    border-left: 0;
+    border-top: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
 .blog__hero--items {
   display: flex;
   flex-direction: column;
@@ -114,6 +125,10 @@ header {
 
 .single__post {
   min-height: 600px;
+}
+
+.single__post h1 {
+  font-weight: 900;
 }
 
 @media screen and (width <= 768px) {
@@ -174,4 +189,215 @@ header {
 .author__name p:first-child {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.single__post .row-2 .post--breadcrum a {
+  color: var(--main-green);
+  text-decoration: none;
+}
+
+.single__post .row-2 .post--breadcrum a:hover {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* ARTICLE SECTION */
+
+article {
+  padding: 0.5rem 1rem;
+}
+.post--content p {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.post--content h2 {
+  font-weight: 700;
+}
+
+.post--content h3,
+h4 {
+  font-weight: 600;
+}
+
+.post--content a {
+  color: var(--main-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.post--content a:hover {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.post--content blockquote {
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: var(--grey);
+  max-width: 80%;
+  font-weight: 600;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.post--content blockquote::before {
+  content: "\f10d";
+  font-size: 110px;
+  font-family: "FontAwesome";
+  content: "\f10d";
+  font-size: 35px;
+  font-weight: 900;
+  color: var(--main-green);
+  z-index: 1;
+  position: relative;
+  top: -22px;
+  right: 0;
+  left: -15px;
+  line-height: 1;
+}
+
+/* SOURCES STYLE */
+
+.accordion-button {
+  background-color: var(--main-green) !important;
+  color: var(--bg-grey) !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition: all 0.5s ease-in;
+}
+
+.accordion-button::after {
+  content: "+";
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 800;
+  padding-right: 50px;
+  margin-top: -25px;
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  color: var(--bg-grey) !important;
+  content: "-";
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-top: 25px;
+  font-weight: 800;
+  padding-right: 50px;
+  background-image: none;
+}
+
+/* CONTENT AUTHOR */
+
+@media screen and (width >= 768px) {
+  .content--Author {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .content--Author img {
+    width: 80px;
+
+    object-fit: cover;
+  }
+}
+.content--Author {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.content--Author img {
+  border-radius: 50%;
+}
+
+/* RELATED POSTS SECTION */
+
+.related--posts h3 {
+  font-weight: 600;
+  border-left: 4px solid var(--main-green);
+  padding: 0.3rem 1rem;
+  background-color: var(--dark);
+  color: var(--bg-grey);
+  width: fit-content;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+/* COMMENT BOX */
+
+.comment--box {
+  border: 1px solid var(--grey);
+  border-radius: 0.3rem;
+  width: 80%;
+}
+
+.comment--box h3 {
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.back-to-home,
+.go-to-comment {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid var(--light-green);
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+}
+
+.back-to-home:hover,
+.go-to-comment:hover {
+  background-color: var(--main-green);
+}
+
+.back-to-home a,
+.go-to-comment a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* SINGLE POST SIDEBAR */
+
+sidebar h3 {
+  font-weight: 600;
+  border-left: 4px solid var(--main-green);
+  padding: 0.3rem 1rem;
+  background-color: var(--dark);
+  color: var(--bg-grey);
+  width: fit-content;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+.sidebar__popular--Item {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--main-green);
+  padding: 0.5rem 0;
+}
+
+.popular__thumbnail {
+  border-radius: 8px;
+}
+
+.popular__post-title a {
+  font-size: clamp(16px, 5vw, 20px);
+  font-weight: 600;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.popular__post-title a:hover {
+  color: var(--main-green);
+}
+
+.sidebar__popular.sticky-top {
+  z-index: 0;
+  top: 150px;
 }
