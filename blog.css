@@ -269,22 +269,13 @@ h4 {
 }
 
 .accordion-button::after {
-  content: "+";
-  font-size: clamp(1rem, 3vw, 2rem);
-  font-weight: 800;
-  padding-right: 50px;
-  margin-top: -25px;
-  background-image: none;
+  background-color: var(--bg-grey);
+  border-radius: 50%;
 }
 
-.accordion-button:not(.collapsed)::after {
-  color: var(--bg-grey) !important;
-  content: "-";
-  font-size: clamp(1rem, 3vw, 2rem);
-  margin-top: 25px;
-  font-weight: 800;
-  padding-right: 50px;
-  background-image: none;
+.accordion-body {
+  background-color: var(--dark);
+  color: var(--bg-grey);
 }
 
 /* CONTENT AUTHOR */
@@ -311,10 +302,14 @@ h4 {
   border-radius: 50%;
 }
 
+.author__name P:nth-child(2) {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+}
+
 /* RELATED POSTS SECTION */
 
 .related--posts h3 {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.3rem);
   font-weight: 600;
   border-left: 4px solid var(--main-green);
   padding: 0.3rem 1rem;
@@ -330,7 +325,7 @@ h4 {
 .comment--box {
   border: 1px solid var(--grey);
   border-radius: 0.3rem;
-  width: 80%;
+  width: 100%;
 }
 
 .comment--box h3 {
