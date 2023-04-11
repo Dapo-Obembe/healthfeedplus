@@ -135,6 +135,8 @@ header {
   width: 50%;
   display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   justify-content: center;
 }
 
@@ -182,7 +184,10 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
+  -webkit-flex-direction: row;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
@@ -191,6 +196,7 @@ header {
 .home__topics--single {
   display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--light-green);
